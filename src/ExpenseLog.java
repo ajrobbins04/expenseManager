@@ -79,6 +79,7 @@ public class ExpenseLog {
         return isSaved;
     }
 
+
     // retrieves all expenses for a given month and year
     public HashMap<LocalDate, List<Expense>> getMonthlyExpenses(int month, int year) {
 
@@ -116,6 +117,7 @@ public class ExpenseLog {
         return monthlyExpenses;
     }
 
+
     private void addToMonthlyExpenses(Expense exp, HashMap<LocalDate, List<Expense>> monthlyExpenses) {
   
         // If it's a new date, create a new list to put inside monthlyExpenses
@@ -131,6 +133,7 @@ public class ExpenseLog {
         dailyExpenses.add(exp);
 
     }
+
 
     private boolean isDirectoryCreated(Expense exp, String dirPath) {
 
@@ -154,6 +157,7 @@ public class ExpenseLog {
         return dirCreated;
     }
 
+
     private boolean isFileCreated(Expense exp, File file) {
 
         boolean fileCreated = false;
@@ -171,13 +175,4 @@ public class ExpenseLog {
         }
         return fileCreated;
     }
-
-    public void removeExpense(Expense expense) {
-        
-    }
-
-    public void editExpense(Expense expense) {
-        
-    }
-
 }

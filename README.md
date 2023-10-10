@@ -11,10 +11,9 @@ can be retrieved at a later time by selecting a particular month and year to vie
 all the expenses that were made during that time interval.
 
 I wrote this expense tracker because it gave me a great opportunity to implement
-objects from many different packages in Java, including java.io, java.util, and 
-java.time. Some of the objects that I used frequently included Scanner, LocalDate,
-String, HashMap, ArrayList, and File. There were also many opportunities to explore
-the different kinds of exceptions that can be thrown in Java.
+objects from many different libraries in Java, including Scanner, LocalDate, String,
+HashMap, ArrayList, and File. There were also many opportunities in this project to 
+explore the different kinds of exceptions that can be thrown in Java.
 
 {Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code. Focus should be on sharing what you learned about the language syntax.}
 
@@ -22,9 +21,15 @@ the different kinds of exceptions that can be thrown in Java.
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
+This program was developed using Java version 21 on a 64-bit server VM.
 
-{Describe the programming language that you used and any libraries.}
+It was written in VS Code, and no build tools were utilized.
+
+## The libraries utilized include:
+- java.io
+- java.util
+- java.time
+- java.lang
 
 # Useful Resources
 

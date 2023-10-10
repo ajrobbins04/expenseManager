@@ -44,12 +44,8 @@ public class Menu {
         System.out.println("\n  Expense Tracker Options:\n");
         System.out.println("    1 - Create new expense entry.");
         System.out.println("    2 - Retrieve expenses by month and year.");
-        /*System.out.println("    2 - Retrieve expenses by date.");
-        System.out.println("    3 - Retrieve expenses by month.");
-        System.out.println("    4 - Analyze spending habits by month.\n");*/
         System.out.println("    Press 'q' to quit.");
 
         System.out.print("\n\n  Enter your choice (1-2) > ");
     }
-    
 }

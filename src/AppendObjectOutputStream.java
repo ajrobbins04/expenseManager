@@ -6,9 +6,6 @@ import java.io.IOException;
     * Is an extending subclass of the standard ObjectOutputStream
     * class. Will be used to ensure that Expense objects can be
     * appended to the existing ObjectOutputStream.
-    * 
-    * This class is attributed to the following post:
-    * https://stackoverflow.com/questions/49655425/appendable-output-stream-java
 */
 
 public class AppendObjectOutputStream extends ObjectOutputStream {

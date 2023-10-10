@@ -24,10 +24,21 @@ public class Manager {
         System.out.print("\n  Enter the name of the expense > ");
         String name = input.nextLine();
 
-        // get expense amount
-        System.out.print("\n  Enter the expense amount > $");
-        double amount = input.nextDouble();
-        input.nextLine(); // consumes the newline character after nextDouble or nextInt
+        // starts w/invalid amount
+        double amount = -1.0;
+
+        // continue getting expense amount until it is valid
+        do {
+            System.out.print("\n  Enter the expense amount > $");
+            if (input.hasNextDouble()) {
+                amount = input.nextDouble();
+            }
+            else {
+                System.out.println("\n  ERROR: Invalid input entered. Please enter an amount greater than 0.");
+            }
+            input.nextLine(); // consumes the newline character after invalid input, nextDouble, or nextInt
+        } while (amount <= 0.0);
+
 
         // create expense obj w/its name and amount for starters
         Expense exp = new Expense(name, amount);
@@ -48,37 +59,43 @@ public class Manager {
   
     }
 
+
     public void addCategory(Expense exp) {
 
-        // get category selected from the expCategories array in Expense class
+        // start with an invalid category number
         int categoryNum = -1;
 
         System.out.println("\n  Select a category number from the options below:\n");
 
+        // continue getting category number until it is valid
         do {
+            // display all categories in the Expense.expCategories array
             exp.displayCategories();
 
             System.out.print("\n\n  Enter your choice (1 - " + (exp.getCategoriesLength() + 1) + ") > ");
 
+            // check that input is a int before accepting it
             if (input.hasNextInt()) {
                 categoryNum = input.nextInt();
                 input.nextLine(); 
 
                 if (categoryNum < 1 || categoryNum > (exp.getCategoriesLength() + 1)) {
                     System.out.println("\n  ERROR: Invalid category entered.");
-                    System.out.println("Please select a category number from the options below:\n");
+                    System.out.println("Please enter a category number from the options below:\n");
                     input.nextLine();
                 }
             } 
-            // input was not an integer
+            // input wasn't an integer
             else {
-                System.out.println("\n  ERROR: Invalid input. Please try again.");
+                System.out.println("\n  ERROR: Invalid input.");
+                System.out.println("Please enter a category number from the options below:\n");
                 input.nextLine();  // consume invalid input
             }   
         } while (categoryNum < 1 || categoryNum > exp.getCategoriesLength());
 
-    exp.setCategory(categoryNum);
-}
+        exp.setCategory(categoryNum);
+    }
+
 
     public void addExpenseDate(Expense exp) {
 
@@ -119,6 +136,7 @@ public class Manager {
         } while (dateOption != 1 && dateOption != 2);
     }
 
+
     public void retrieveExpenses() {
 
         int monthYearValues[] = getMonthYearValues(); 
@@ -129,6 +147,7 @@ public class Manager {
 
         displayMonthlyExpenses(monthlyExpenses, month, year);
     }
+
 
     // returns an integer array containing the values for 
     // the month and year selected by the user 
@@ -173,8 +192,8 @@ public class Manager {
         monthYearValues[1] = year;
 
         return monthYearValues;
-        
     }
+
 
     public void displayMonthlyExpenses(HashMap<LocalDate, List<Expense>> monthlyExpenses, int month, int year) {
     
@@ -199,6 +218,7 @@ public class Manager {
             }
         }
     }
+
 
     private void assignPastDate(Expense exp) {
 
@@ -236,6 +256,7 @@ public class Manager {
         } while (!isValidDate);
     }
 
+
     private boolean isValidDate(int month, int day, int year) {
         if (isMonthValid(month)) {
             if (isYearValid(year)) {
@@ -258,6 +279,7 @@ public class Manager {
         }
     }
 
+
     private boolean isLeapYear(int year) {
         if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
             return true; // is a leap year
@@ -266,9 +288,11 @@ public class Manager {
         }
     }
 
+
     private boolean isMonthValid(int month) {
         return month > 0 && month < 13;
     }
+
 
     // expense date must be from the current year, 
     // or a previous one up to 2010 at the earliest.
@@ -292,6 +316,7 @@ public class Manager {
 
         return true;
     }
+
 
     private int convertMonthToValue(String month) {
 
@@ -335,11 +360,10 @@ public class Manager {
                 monthNum = 12;
                 break;
         }
-
         // returns a -1 if invalid
         return monthNum;
-
     }
+
 
     private int getNumDays(int month, int year) {
 
@@ -373,6 +397,7 @@ public class Manager {
         return numDays; // returns -1 if invalid
     }
 
+
     // ensure the day is valid based on the
     // given month and year
     private boolean isDayValid(int day, int month, int year) {
@@ -405,5 +430,4 @@ public class Manager {
         }
         return false; // Default case
     }
-
 }
