@@ -1,6 +1,5 @@
 package src;
 
-import java.io.IOException; // input/output exception handling
 import java.util.Scanner;
 
 public class Menu {

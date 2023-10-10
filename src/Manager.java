@@ -1,8 +1,5 @@
 package src;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;  
@@ -194,7 +191,7 @@ public class Manager {
                     if (count == 0) {
                         System.out.println("\n  --- " + exp.getDateString() + " --- \n");
                     } else {
-                        System.out.println("\n");
+                        System.out.print("\n");
                     }
                     exp.displayExpense();
                     count++;

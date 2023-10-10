@@ -1,18 +1,48 @@
-## Getting Started
+# Overview
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+This was my first Java project, so I tried to take this opportunity to implement 
+many of the characteristics that sets Java apart from other languages I've learned.
+This led to a lot of research during the course of the project, and I feel like
+I gained a much deeper understanding of the Java language and what it can be used
+to accomplish in software development.
 
-## Folder Structure
+The expense tracker that I wrote in Java is able to input a user's expenses, which 
+can be retrieved at a later time by selecting a particular month and year to view
+all the expenses that were made during that time interval.
 
-The workspace contains two folders by default, where:
+I wrote this expense tracker because it gave me a great opportunity to implement
+objects from many different packages in Java, including java.io, java.util, and 
+java.time. Some of the objects that I used frequently included Scanner, LocalDate,
+String, HashMap, ArrayList, and File. There were also many opportunities to explore
+the different kinds of exceptions that can be thrown in Java.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+{Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code. Focus should be on sharing what you learned about the language syntax.}
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+[Software Demo Video](http://youtube.link.goes.here)
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+# Development Environment
 
-## Dependency Management
+{Describe the tools that you used to develop the software}
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+{Describe the programming language that you used and any libraries.}
+
+# Useful Resources
+
+{Make a list of websites that you found helpful in this project}
+
+- [MOOC Java Programming](https://java-programming.mooc.fi/part-1)
+- [Java Video Tutorials by Alex Lee](https://www.youtube.com/@alexlorenlee)
+
+- "Java in a Nutshell", 6th edition, by Benjamin J. Evans & David Flanagan
+
+# Future Work
+
+- Option for users to remove expenses.
+- Option for users to edit expenses.
+- Option for users to add a monthly budget.
+- Option for users to add monthly income.
+- Enhanced input validation.
+- Implement user accounts with sign-in required.
+- Provide warnings when outgoing expenses are at
+  risk of exceeding monthly budget and/or monthly income.
+- Provide insights derived from spending habits.

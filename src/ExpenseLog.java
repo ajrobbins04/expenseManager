@@ -6,7 +6,6 @@ import java.io.File;                  // File objects
 
 import java.io.FileOutputStream;      // write to a File 
 import java.io.ObjectOutputStream;    // write in objects
-import java.io.OutputStream;
 import java.io.FileInputStream;       // read from a File 
 import java.io.ObjectInputStream;     // read in objects
 import java.io.IOException;           // error handling
@@ -14,9 +13,8 @@ import java.io.FileNotFoundException; // file error handling
 
 import java.util.List;        
 import java.util.ArrayList;   // holds retrieved list of Expense objs
-import java.util.Map;
 import java.util.HashMap;     // holds retrieved expense dates w/corresponding lists of Expenses
-import java.util.Scanner;
+
 
 
 /**
@@ -32,8 +30,8 @@ public class ExpenseLog {
 
         // files organized by month and placed in directories by year
       
-        String dirPath = "/Users/AmberRobbins/portfolio/projects/javaProjects/expenseTracker/logFiles/" + exp.getYear();
-        String filePath = "/Users/AmberRobbins/portfolio/projects/javaProjects/expenseTracker/logFiles/" + exp.getYear() +
+        String dirPath = "/Users/AmberRobbins/portfolio/projects/expenseManager/src/logFiles/" + exp.getYear();
+        String filePath = "/Users/AmberRobbins/portfolio/projects/expenseManager/src/logFiles/" + exp.getYear() +
             "/" + exp.getMonth() + ".txt";
 
         // files organized by month
@@ -87,7 +85,7 @@ public class ExpenseLog {
         
         // use the selected month and year to generate the filePath
         // of expenses made during that time
-        String filePath = "/Users/AmberRobbins/portfolio/projects/javaProjects/expenseTracker/logFiles/" + year + "/" + month + ".txt";
+        String filePath = "/Users/AmberRobbins/portfolio/projects/expenseManager/src/logFiles/" + year + "/" + month + ".txt";
 
         HashMap<LocalDate, List<Expense>> monthlyExpenses = new HashMap<>();
 
