@@ -17,7 +17,7 @@ explore the different kinds of exceptions that can be thrown in Java.
 
 {Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code. Focus should be on sharing what you learned about the language syntax.}
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/TjGt7Z6pIlY)
 
 # Development Environment
 
