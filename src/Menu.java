@@ -2,6 +2,12 @@ package src;
 
 import java.util.Scanner;
 
+/**
+ * @param: input - Scanner obj to collect user input.
+ * @param: userChoice - the input value selected by the user.
+ * @param: manage - performs actions based on the user's choice.
+ */
+
 public class Menu {
 
     public static void main(String[] args) {

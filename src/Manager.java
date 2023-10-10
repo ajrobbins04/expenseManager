@@ -3,10 +3,14 @@ package src;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;  
-import java.time.LocalDate; // use to get current date
+import java.time.LocalDate; 
 import java.time.Year;
 
 /**
+ * Handles all actions to be performed based on the user's
+ * input. Is currently able to input and save new expenses,
+ * along with retrieve and display those expenses by month.
+ * 
  * @param: input - Scanner obj to collect user input
  * @param: expLog - the expense log that stores records
  * @param: expCategories - available expense categories

@@ -1,7 +1,6 @@
 package src;
 
-// java.lang classes are automatically imported. Explicitly
-// declaring it allows declaration of "String" before variables.
+// technically, java.lang classes are automatically imported. 
 import java.lang.String;
 
 import java.time.format.DateTimeFormatter;
@@ -16,6 +15,7 @@ import java.io.Serializable;
  * @param: name - what the expense was used to pay for.
  * @param: amount - the monetary amount of the expense.
  * @param: category - the spending category of the expense.
+ * @param: date - the date in which the expense was made.
  */
 
 
