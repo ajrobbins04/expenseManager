@@ -19,7 +19,7 @@ public class Menu {
         do {
             displayMainMenu();
 
-            // intended to store one of the 5 menu options
+            // intended to store one of the menu option numbers (or "q" for quit)
             userChoice = input.nextLine();
 
             switch (userChoice) {

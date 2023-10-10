@@ -15,8 +15,6 @@ import java.util.List;
 import java.util.ArrayList;   // holds retrieved list of Expense objs
 import java.util.HashMap;     // holds retrieved expense dates w/corresponding lists of Expenses
 
-
-
 /**
  * ExpenseLog stores and retrieves all expense entries
  * from .txt files that are grouped by year and 
@@ -25,11 +23,10 @@ import java.util.HashMap;     // holds retrieved expense dates w/corresponding l
 
 public class ExpenseLog {
 
-    // writes the new expense to a file 
+    // writes the new expense to a files that are organized by month
+    // and placed in directories by year
     public boolean saveToLog(Expense exp) {
 
-        // files organized by month and placed in directories by year
-      
         String dirPath = "/Users/AmberRobbins/portfolio/projects/expenseManager/src/logFiles/" + exp.getYear();
         String filePath = "/Users/AmberRobbins/portfolio/projects/expenseManager/src/logFiles/" + exp.getYear() +
             "/" + exp.getMonth() + ".txt";
@@ -39,7 +36,7 @@ public class ExpenseLog {
 
         boolean isSaved = false;
      
- 
+        // ensure the directory and file are created before writing to the file
         if (isDirectoryCreated(exp, dirPath) && isFileCreated(exp, file)) {
    
             // check if file already has expense data

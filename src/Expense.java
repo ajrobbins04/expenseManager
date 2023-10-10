@@ -16,6 +16,8 @@ import java.io.Serializable;
  * @param: amount - the monetary amount of the expense.
  * @param: category - the spending category of the expense.
  * @param: date - the date in which the expense was made.
+ * @param: expCategories - a static array containing the list
+ *         of categories that a user may choose from.
  */
 
 
@@ -26,6 +28,7 @@ public class Expense implements Serializable {
     private LocalDate date;
     private String category; 
 
+    // users are given a list of categories to choose from
     private static String[] expCategories = {
         "Housing",
         "Food",
